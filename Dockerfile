@@ -45,6 +45,14 @@ RUN NODE_OPTIONS="--max-old-space-size=4096" npm run build -- --debug
 # Final Stage: Runtime container
 FROM alpine:3.18
 
+# Add metadata labels
+LABEL org.opencontainers.image.title="ZenBPM All-in-One"
+LABEL org.opencontainers.image.description="Complete ZenBPM solution with backend, frontend, and nginx in a single container"
+LABEL org.opencontainers.image.vendor="Process Builders Initiative"
+LABEL org.opencontainers.image.source="https://github.com/pbinitiative/zenbpm-aio"
+LABEL org.opencontainers.image.documentation="https://github.com/pbinitiative/zenbpm-aio/blob/main/README.md"
+LABEL org.opencontainers.image.licenses="MIT"
+
 # Install runtime dependencies
 RUN apk add --no-cache \
     ca-certificates \

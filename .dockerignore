@@ -1,0 +1,37 @@
+# Git
+.git
+.gitignore
+
+# Documentation
+README.md
+*.md
+
+# Node modules (will be installed during build)
+node_modules
+npm-debug.log*
+
+# Runtime data
+node-1/
+*.log
+
+# IDE files
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# GitHub Actions
+.github
+
+# Temporary files
+*.tmp
+*.temp
