@@ -23,7 +23,7 @@ ENV CGO_ENABLED=1
 
 
 # Build the Go application
-RUN make build
+RUN if [ -d "cmd" ]; then go build -o zenbpm ./cmd/...; elif [ -f "main.go" ]; then go build -o zenbpm .; else go build -o zenbpm ./...; fi
 
 # Stage 2: Build ZenBPM Showcase FE (Vue app)
 FROM node:18-alpine AS frontend-builder

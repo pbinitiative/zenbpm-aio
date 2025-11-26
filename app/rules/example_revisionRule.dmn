@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="example_revision" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.25.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.5.0">
+  <decision id="example_revisionRule" name="Rozhodnutí o nutnosti revize">
+    <decisionTable id="DecisionTable_0kg70pm" hitPolicy="FIRST">
+      <input id="Input_1" label="Hodnota">
+        <inputExpression id="InputExpression_1" typeRef="number">
+          <text>claim.amountOfDamage</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1ns5shm" label="Kmen">
+        <inputExpression id="LiteralExpression_0fxhjt6" typeRef="string">
+          <text>claim.branch</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Revize nutná" name="revision" typeRef="boolean" />
+      <rule id="DecisionRule_06b9xbm">
+        <inputEntry id="UnaryTests_1agl9d2">
+          <text>&gt; 50000</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0inn69y">
+          <text>"vozidla"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0jk60k9">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0hoptz2">
+        <inputEntry id="UnaryTests_00x1xq3">
+          <text>&gt;20000</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1luqu67">
+          <text>"majetek"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0gu18s9">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_10k7rtd">
+        <inputEntry id="UnaryTests_0i3m2dq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04c38gy">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1z0xji1">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="example_revisionRule">
+        <dc:Bounds height="80" width="180" x="161" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

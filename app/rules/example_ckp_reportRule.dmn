@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="example_ckpReport" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.25.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.5.0">
+  <decision id="example_ckp_reportRule" name="Rozhodnutí o nutnosti nahlášení na ČKP">
+    <decisionTable id="DecisionTable_0214j01" hitPolicy="FIRST">
+      <input id="Input_1" label="Kmen">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>claim.insuranceType</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Hlásit" name="result" typeRef="boolean" />
+      <rule id="DecisionRule_10nyt47">
+        <inputEntry id="UnaryTests_08noa7f">
+          <text>"HAV-POV"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1f9b4by">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_188iblc">
+        <inputEntry id="UnaryTests_1mj4f3s">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1efzhds">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="example_ckp_reportRule">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

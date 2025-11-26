@@ -6,7 +6,7 @@ Pull and run the latest pre-built image from GitHub Container Registry:
 
 ```sh
 # Pull the latest image
-docker pull ghcr.io/pbinitiative/zenbpm-aio:latest
+docker pull ghcr.io/pbinitiative/zenbpm-aio:latest --platform linux/amd64
 
 # Run the container
 docker run -p 3000:80 -p 8080:8080 -p 9090:9090 \
