@@ -10,7 +10,3 @@ run-infra:
 
 stop-infra:
 	$(COMPOSE) -f $(COMPOSE_FILE) down
-
-# Stop and remove the app container
-stop-app:
-	-@docker rm -f vig-showcase-be 2>/dev/null || true

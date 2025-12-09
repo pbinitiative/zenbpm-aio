@@ -4,7 +4,7 @@
 
 ### Option 1: Using Makefile for Development
 
-For local development with infrastructure services and the vig-showcase app:
+For local development with infrastructure services and the showcase app:
 
 ```sh
 # Start infrastructure services (using docker compose)
@@ -56,8 +56,6 @@ The project includes a Makefile with the following commands:
 | ----------------- | ------------------------------------------------------ |
 | `make run-infra`  | Start infrastructure services using docker compose     |
 | `make stop-infra` | Stop infrastructure services                           |
-| `make run-app`    | Start the vig-showcase application container           |
-| `make stop-app`   | Stop and remove the vig-showcase application container |
 
 **Customization:** You can override the compose command by setting the `COMPOSE` variable:
 
@@ -72,7 +70,6 @@ make run-infra COMPOSE="docker-compose"
 | Nginx           | 3000 | Serving frontend and providing reverse proxy for backend |
 | ZenBPM REST API | 8080 |                                                          |
 | ZenBPM gRPC API | 9090 |                                                          |
-| vig-showcase    | -    | Application container (when using Makefile)              |
 
 ## Volumes
 
