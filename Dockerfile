@@ -1,7 +1,7 @@
 # Multi-stage Dockerfile for ZenBPM AIO
 
 # Stage 1: Build ZenBPM (Go app)
-FROM golang:1.24.5-alpine AS zenbpm-builder
+FROM golang:alpine AS zenbpm-builder
 
 # Install git and other dependencies
 RUN apk add --no-cache git ca-certificates make bash curl gcc g++ musl-dev

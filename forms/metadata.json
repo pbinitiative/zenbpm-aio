@@ -1,26 +1,4 @@
 {
-  "processes": [
-    {
-      "id": "example-claim-handling",
-      "name": "Insurance claim processing",
-      "agenda": "Claims settlement"
-    },
-    {
-      "id": "policy-change-process",
-      "name": "Policy change",
-      "agenda": "Claims settlement"
-    }
-  ],
-  "tasks": [
-    {
-      "id": "example-claim-check-task-1",
-      "name": "Manual claims settlement",
-      "process": "Insurance claim processing"
-    },
-    {
-      "id": "example-claim-check-task-2",
-      "name": "Revision execution",
-      "process": "Insurance claim processing"
-    }
-  ]
+  "processes": [],
+  "tasks": []
 }
